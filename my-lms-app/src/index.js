@@ -1,3 +1,6 @@
+// Charlie Lang - 30118227
+// Justin Vuong - 30205375
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
