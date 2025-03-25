@@ -5,16 +5,16 @@ const CourseItem = ({ course, onEnroll }) => {
   const [showDescription, setShowDescription] = useState(false);
 
   return (
-    <div 
+    <div
       className="course-item"
       onMouseEnter={() => setShowDescription(true)}
       onMouseLeave={() => setShowDescription(false)}
     >
       <img src={course.image} alt={course.name} />
       <h3>{course.name}</h3>
-      <p>{course.instructor}</p>
-      <button onClick={() => onEnroll(course)}>Enroll Now</button>
-      {showDescription && <p>{course.description}</p>}
+      <p className={`course-description ${showDescription ? "visible" : ""}`}>
+        {course.description}
+      </p>
     </div>
   );
 };
